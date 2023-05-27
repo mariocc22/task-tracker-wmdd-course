@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project draws inspiration from Traversy Media tutorials, while incorporating additional features developed by me. These additions include the implementation of CRUD operations, utilization of portals for modals, and the integration of the Context API for improved state management.
 
 ## Available Scripts
 
