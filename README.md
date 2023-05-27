@@ -2,6 +2,10 @@
 
 This project draws inspiration from Traversy Media tutorials, while incorporating additional features developed by me. These additions include the implementation of CRUD operations, utilization of portals for modals, and the integration of the Context API for improved state management.
 
+## Example
+
+![](./src/assets/task-tracker.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
