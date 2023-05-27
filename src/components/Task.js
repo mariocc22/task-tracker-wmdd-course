@@ -2,7 +2,19 @@
 import { FaTimes, FaEdit } from "react-icons/fa";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 
-const Task = ({ task, onDelete, setReminder, setStatus }) => {
+const Task = ({
+  task,
+  onDelete,
+  setReminder,
+  setStatus,
+  setIsOpen,
+  setTaskEdit,
+}) => {
+  const handleEdit = () => {
+    setIsOpen(true);
+    setTaskEdit(task.id);
+  };
+
   return (
     <div
       className={`task ${task.reminder ? "reminder" : ""}`}
@@ -16,6 +28,7 @@ const Task = ({ task, onDelete, setReminder, setStatus }) => {
           <>
             <FaEdit
               style={{ color: "red", cursor: "pointer", marginLeft: "auto" }}
+              onClick={handleEdit}
             />
             <FaTimes
               style={{ color: "red", cursor: "pointer" }}

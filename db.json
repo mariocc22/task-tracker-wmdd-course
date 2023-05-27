@@ -1,18 +1,25 @@
 {
   "tasks": [
     {
-      "text": "Task 1",
-      "day": "1232324423",
+      "text": "2323",
+      "day": "2323",
       "reminder": false,
       "status": "active",
       "id": 1
     },
     {
-      "text": "Task 3",
-      "day": "324234",
-      "reminder": true,
-      "status": "active",
+      "text": "234",
+      "day": "234",
+      "reminder": false,
+      "status": "completed",
       "id": 2
+    },
+    {
+      "text": "Algo Bien",
+      "day": "12334",
+      "reminder": false,
+      "status": "active",
+      "id": 3
     }
   ]
 }
