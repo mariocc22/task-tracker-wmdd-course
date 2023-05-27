@@ -5,16 +5,20 @@ import Footer from "./components/Footer";
 import About from "./components/About/About";
 import Filter from "./components/Filter";
 import Completed from "./components/Completed/Completed";
+import EditTask from "./components/Modal/EditTask";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // hooks
 import { useState, useEffect } from "react";
+import Modal from "./components/Modal/Modal";
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([]);
   const [filters, setFilters] = useState("all");
+  const [isOpen, setIsOpen] = useState(false);
+  const [taskEdit, setTaskEdit] = useState("");
 
   useEffect(() => {
     const getTasks = async () => {
@@ -67,6 +71,28 @@ function App() {
     });
     const data = await res.json();
     setTasks([...tasks, data]);
+  };
+
+  // edit task
+  const editTask = async ({ id, text, day }) => {
+    console.log(id);
+    const idTask = await fetchTask(id);
+    const upTask = { ...idTask, text: text, day: day };
+
+    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(upTask),
+    });
+    const data = await res.json();
+
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, text: data.text, day: data.day } : task
+      )
+    );
   };
 
   // delete task
@@ -143,7 +169,16 @@ function App() {
                       onDelete={deleteTask}
                       setStatus={changeStatus}
                       setReminder={setReminder}
+                      setIsOpen={setIsOpen}
+                      setTaskEdit={setTaskEdit}
                     />
+                    <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+                      <EditTask
+                        id={taskEdit}
+                        editTask={editTask}
+                        setIsOpen={setIsOpen}
+                      />
+                    </Modal>
                   </>
                 ) : (
                   "No tasks to show"
