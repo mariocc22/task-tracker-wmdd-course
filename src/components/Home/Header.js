@@ -1,6 +1,10 @@
+// props
 import PropTypes from "prop-types";
+
+// components
 import Button from "./Button";
 
+// hooks
 import { useLocation } from "react-router-dom";
 
 const Header = ({ title, setShowAddTask, showAddTask }) => {

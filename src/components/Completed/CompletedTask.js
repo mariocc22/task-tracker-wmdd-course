@@ -1,5 +1,4 @@
-import React from "react";
-
+// icons
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import { TbReload } from "react-icons/tb";
 import { FaTimes } from "react-icons/fa";

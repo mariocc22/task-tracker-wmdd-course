@@ -1,9 +1,11 @@
+// react
 import React from "react";
 import ReactDom from "react-dom";
 
 // icons
 import { FaTimes } from "react-icons/fa";
 
+// inline styling
 const MODAL_STYLES = {
   display: "flex",
   flexDirection: "column",

@@ -1,3 +1,4 @@
+// components
 import Header from "./components/Home/Header";
 import Tasks from "./components/Home/Tasks";
 import AddTask from "./components/Home/AddTask";
@@ -33,7 +34,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [taskEdit, setTaskEdit] = useState("");
 
-  // retrieve tasks form db
+  // retrieve tasks form database (db.json)
   useEffect(() => {
     const getTasks = async () => {
       const tasksServer = await fetchTasks();
