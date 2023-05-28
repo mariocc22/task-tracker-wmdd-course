@@ -23,7 +23,9 @@ const Task = ({
       <h3>
         {task.text}{" "}
         {task.status === "completed" ? (
-          <BsFillCheckCircleFill style={{ color: "green" }} />
+          <BsFillCheckCircleFill
+            style={{ color: "green", transform: "scale(1.5)" }}
+          />
         ) : (
           <>
             <FaEdit

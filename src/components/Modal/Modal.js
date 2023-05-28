@@ -1,7 +1,13 @@
 import React from "react";
 import ReactDom from "react-dom";
 
+// icons
+import { FaTimes } from "react-icons/fa";
+
 const MODAL_STYLES = {
+  display: "flex",
+  flexDirection: "column",
+  gap: "1rem",
   position: "fixed",
   top: "50%",
   left: "50%",
@@ -9,6 +15,8 @@ const MODAL_STYLES = {
   backgroundColor: "#FFF",
   padding: "50px",
   zIndex: 1000,
+  width: "30rem",
+  borderRadius: "1rem",
 };
 
 const OVERLAY_STYLES = {
@@ -21,6 +29,17 @@ const OVERLAY_STYLES = {
   zIndex: 1000,
 };
 
+const CLOSE_ICON = {
+  transform: "scale(1.5)",
+  cursor: "pointer",
+};
+
+const TOP_ROW = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+};
+
 const Modal = ({ children, open, onClose }) => {
   if (!open) return null;
 
@@ -28,7 +47,10 @@ const Modal = ({ children, open, onClose }) => {
     <>
       <div style={OVERLAY_STYLES} />
       <div style={MODAL_STYLES}>
-        <button onClick={onClose}>Close Modal</button>
+        <div style={TOP_ROW}>
+          <h3>Edit Task</h3>
+          <FaTimes style={CLOSE_ICON} onClick={onClose} />
+        </div>
         {children}
       </div>
     </>,

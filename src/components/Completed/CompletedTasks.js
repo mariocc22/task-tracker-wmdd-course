@@ -7,7 +7,9 @@ const CompletedTasks = ({ tasks, deleteTask, setStatus }) => {
   return (
     <>
       {!tasks.length ? (
-        <h3>You haven't completed any task! </h3>
+        <h3 style={{ margin: "1rem", textAlign: "center" }}>
+          You haven't completed any task!{" "}
+        </h3>
       ) : (
         tasks.map((task) => (
           <CompletedTask

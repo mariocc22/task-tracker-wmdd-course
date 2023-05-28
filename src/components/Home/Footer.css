@@ -1,0 +1,20 @@
+.footerLinks {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.25s ease;
+}
+
+.footerLinks:hover {
+  transform: translateY(-2px);
+}
+
+.footerLinksContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}

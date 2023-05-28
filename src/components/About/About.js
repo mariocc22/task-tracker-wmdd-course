@@ -1,10 +1,15 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+// styles
+import "./About.css";
 
 const About = () => {
   return (
-    <div>
+    <div className="container-about">
       <h4>Version 1.0.0</h4>
-      <Link to="/">Go Back</Link>
+      <NavLink className="backLink" to="/">
+        Go Back
+      </NavLink>
     </div>
   );
 };
