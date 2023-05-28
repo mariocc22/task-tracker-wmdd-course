@@ -1,25 +1,3 @@
 {
-  "tasks": [
-    {
-      "text": "werw",
-      "day": "w23234",
-      "reminder": false,
-      "status": "active",
-      "id": 1
-    },
-    {
-      "text": "erferfe",
-      "day": "ferferf",
-      "reminder": false,
-      "status": "completed",
-      "id": 2
-    },
-    {
-      "text": "Algo Bien",
-      "day": "12334",
-      "reminder": false,
-      "status": "active",
-      "id": 3
-    }
-  ]
+  "tasks": []
 }
