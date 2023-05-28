@@ -13,6 +13,13 @@
       "reminder": false,
       "status": "completed",
       "id": 2
+    },
+    {
+      "text": "Algo Bien",
+      "day": "12334",
+      "reminder": false,
+      "status": "active",
+      "id": 3
     }
   ]
 }
